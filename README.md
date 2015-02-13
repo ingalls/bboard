@@ -41,12 +41,14 @@ bBoard({
 </script>
 ```
 
+## Settings
+
 ### `selector` (required)
 
 The div ID/Class or CSS selector of the element
 `.container`, `#boardContainer`, '.content #firstBoard' are all valid examples.
 
-### size (required)
+### `size` (required)
 
 The number of rows and columns in the grid. `[2,2]`, `[3,5]`, `[1,1]` are all valid examples.
 
