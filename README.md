@@ -32,6 +32,7 @@ bBoard({
     selector: "{{div id}}",
     bgcolour: "{{colour code}}",
     size: [{{row}},{{col}}],
+    height: {{percent of width}}
     font: '{{font}}',
     content: [{
         front: {{settings}},
@@ -51,6 +52,18 @@ The div ID/Class or CSS selector of the element
 ### `size` (required)
 
 The number of rows and columns in the grid. `[2,2]`, `[3,5]`, `[1,1]` are all valid examples.
+
+### `height` (optional)
+
+If height is not set, the bBoard will take the height of the container
+that you choose in `selector`. If this is the case then you must have a
+defined height on the element defined by `selector`
+
+If you do now want to have to set the height, than you define the
+height as a percentage of the width of the element. `height: 100` would create
+a square bBoard as the height would always be the same as the width.
+
+`height: 50` would create a rectangle as the height would be 50% of the width.
 
 ### `bgcolour` (optional)
 
