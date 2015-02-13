@@ -1,5 +1,9 @@
 /*jshint jquery:true,browser:true,curly: false */
-/* global $ */
+
+//bBoard.js (c) 2015 Nicholas Ingalls
+//License: MIT (http://opensource.org/licenses/MIT)
+//Repo: github.com/ingalls/bboard
+//Email: nichols.ingalls@gmail.com
 
 var styles = [
     [".row", "{height: {{height}}; width: 100%;}"],
@@ -76,8 +80,10 @@ function bBoard (opts) {
         });
 
         html = html + tmpBlock;
-        if (i % opts.size[0]) html = html + '</div>';
-        if (i === opts.content.length - 1) html = html + '<div class="row">';
+        if (i % opts.size[0]) {
+            html = html + '</div>';
+            if (i !== opts.content.length - 1) html = html + '<div class="row">';
+        }
     }
 
     document.querySelector(opts.selector).innerHTML = html;
